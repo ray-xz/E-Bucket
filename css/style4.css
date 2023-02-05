@@ -1,0 +1,171 @@
+/* -------------CSS DO PARCEIROS---------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: rgb(34, 34, 34);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* principal */
+.container {
+    background: #a0a0a0;
+    min-width: 500px;
+    min-height: 40vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px #64E688;
+    border-radius: 8px;
+}
+
+main h2 {
+    font-weight: 600;
+    font-size: 50px;
+    margin-bottom: 2rem;
+    margin-left: 150px;
+    position: relative;
+}
+
+main h2::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: #64E688;
+
+}
+
+/* inputs  */
+/* form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+} */
+
+.input-field {
+    position: relative;
+
+}
+
+form .input-field:first-child {
+    margin-bottom: 1.5rem;
+
+}
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: #64E688;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus~.underline::after {
+    transform: scaleX(1);
+
+}
+
+.input-field input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    border-radius: 3px;
+
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+form input[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    width: 100%;
+    background: #000;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: #64E688;
+}
+
+/* redes sociais */
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.footer span {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footer .social-field {
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.footer .social-field a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer .social-field.google {
+    background-color: #db4a39;
+}
+
+.footer .social-field.facebook {
+    background-color: #2a5298;
+}
+
+.social-field.inicio-btn {
+    background-color: #64E688;
+}
+
+.social-field.inicio-btn a {
+    margin: 170px;
+}

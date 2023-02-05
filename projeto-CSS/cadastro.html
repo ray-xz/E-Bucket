@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style2.css">
+    <title>Formulário</title>
+</head>
+    <script>
+        // mascara para inputs especificos
+        function mascara_cpf(){
+            var cpf = document.getElementById('cpf')
+            if(cpf.value.length == 3 || cpf.value.length == 7){
+                cpf.value += "."
+            }else if (cpf.value.length == 11) {
+                cpf.value += "-"
+            }
+        }
+
+        function mascara_cep(){
+        var endereço = document.getElementById('endereço')
+        if(endereço.value.length == 5){
+        endereço.value += "-"
+        }
+}
+
+        function mascara_rg(){
+        var rg = document.getElementById('rg')
+        if(rg.value.length == 2 || rg.value.length == 6){
+        rg.value += "."
+        }else if (rg.value.length == 10) {
+        rg.value += "-"
+        }
+}
+
+
+
+//         // função reset 
+//         function resetForm(){
+//    document.getElementById("myForm").reset();
+//  } 
+    </script>
+    
+<body>
+
+    <!-- início do formulário -->
+    <div class="container">
+        <div class="form">
+
+            
+            <!-- começo do form  -->
+            <form id="myForm" name="form">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>  
+                    <div class="login-button">
+                        <button><a href="./index.html">Início</a></button>
+                    </div>
+                </div>
+
+                <!-- formulário de cadastro  -->
+                <!-- Nome  -->
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" class="name" name="name" placeholder="Digite seu nome">
+                    </div>
+
+                    <!-- Idade  -->
+                    <div class="input-box">
+                        <label for="idade">Idade</label>
+                        <input type="text" id="idade" class="idade" name="idade" placeholder="Digite sua idade">
+                    </div>
+
+                    <!-- Endereço  -->
+                    <div class="input-box">
+                        <label for="endereço">Endereço Completo</label>
+                        <input id="endereço" type="endereço" class="endereço" name="endereço" maxlength="9" onkeyup="mascara_cep()" placeholder="Digite seu CEP" >
+                    </div>
+
+                    <!-- CPF  -->
+                    <div class="input-box">
+                        <label for="cpf1">CPF</label>
+                        <input type="text" id="cpf" class="cpf" placeholder="Digite seu CPF" maxlength="14" onkeyup="mascara_cpf()" >
+                    </div>
+
+                    <!-- RG -->
+                    <div class="input-box">
+                        <label for="rg">RG</label>
+                        <input type="text" id="rg" class="rg" name="rg" maxlength="12" placeholder="Digite seu RG" onkeyup="mascara_rg()" >
+                    </div>
+
+                    <!-- campo não será usado nesse formulário  -->
+                    <!-- <div class="input-box">
+                        <label for="confirmPassword">Confirme sua Senha</label>
+                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
+                    </div> -->
+
+                </div>
+
+                 <!-- input de genero -->
+                <div class="genero-inputs">
+                    <div class="genero-title">
+                        <h6>Gênero</h6>
+                    </div>
+
+                    <div class="genero-group">
+                        <div class="genero-input">
+                            <input id="female" type="radio" name="genero" required>
+                            <label for="female">Feminino</label>
+                        </div>
+
+                        <div class="genero-input">
+                            <input id="male" type="radio" name="genero">
+                            <label for="male">Masculino</label>
+                        </div>
+
+                        <div class="genero-input">
+                            <input id="others" type="radio" name="genero">
+                            <label for="others">Outros</label>
+                        </div>
+
+                        <div class="genero-input">
+                            <input id="none" type="radio" name="genero">
+                            <label for="none">Prefiro não dizer</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- botão de cadastro -->
+                <div class="continue-button">
+                    <input id="btn-1" type="submit" value="Enviar">
+                </div>
+
+                    <!-- ultimos botões do exercicios -->
+                <div class="form-header-footer">
+                    <div class="footer-button">
+                        <input id="open" type="button" name="open" value="Open" onclick="windowOpen()">
+                    </div>
+
+                    <div class="footer-button2">
+                        <input id="limpar" type="button" name="limpar" value="Limpar" onclick="limparForm();">
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    
+    <script src="/javascript/validação.js"></script>
+    <script src="/javascript/cpf.js"></script>
+    <script src="/javascript/reset.js"></script>
+    <!-- <script src="/javascript/submit.js"></script> -->
+    <script src="/javascript/window.js"></script>
+    
+</body>
+</html>

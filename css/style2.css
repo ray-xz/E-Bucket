@@ -1,0 +1,260 @@
+/* --------------CSS DO CADASTRO------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+/* cadastro */
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px 5px #64E688;
+    border-radius: 10px;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #a0a0a0;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.title {
+    color: #000;
+    margin-top: 40px;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    border: none;
+    background-color: #64E688;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.login-button button:hover {
+    background-color: #64E688;
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #000;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 12rem;
+    height: 0.3rem;
+    background-color: #64E688;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #64E688;
+    font-size: 0.7rem;
+}
+
+.input-box input:hover {
+    background-color: #fff;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #64E688;
+}
+
+.input-box label,
+.genero-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.genero-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 .5rem;
+}
+
+.genero-input {
+    display: flex;
+    align-items: center;
+}
+
+.genero-input input {
+    margin-right: 0.35rem;
+}
+
+.genero-input label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.continue-button input {
+    width: 90%;
+    margin-top: 3.5rem;
+    margin-left: 1.9rem;
+    border: none;
+    background-color: #64E688;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #000;
+}
+
+/* não será usado nesse formulário neste momento */
+/* .continue-button button:hover {
+    background-color: #64E688;
+} */
+
+/* .continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #000;
+} */
+
+.form-header-footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.footer-button {
+    display: flex;
+    align-items: center;
+}
+
+.footer-button input {
+    border: none;
+    background-color: #4F4F4F;
+    padding: 0.2rem 2.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFF;
+
+}
+
+.footer-button2 input {
+    border: none;
+    background-color: #4F4F4F;
+    padding: 0.2rem 2.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFF;
+
+}
+
+.errorInput {
+    border: 2px solid rgb(207, 53, 53) !important;
+    box-shadow: 1px 1px 6px rgb(207, 53, 53) !important;
+}
+
+/* responsivo */
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+
+    .container {
+        width: 50%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    .input-group {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+
+    .genero-inputs {
+        margin-top: 2rem;
+    }
+
+    .genero-group {
+        flex-direction: column;
+    }
+
+    .genero-title h6 {
+        margin: 0;
+    }
+
+    .genero-input {
+        margin-top: 0.5rem;
+    }
+}
